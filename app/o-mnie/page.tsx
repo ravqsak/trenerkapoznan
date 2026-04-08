@@ -145,34 +145,50 @@ export default function OMniePage() {
 
       {/* Story */}
       <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-serif text-3xl font-semibold text-foreground">
-              <span className="text-balance">Dlaczego to robię?</span>
-            </h2>
-          </FadeIn>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="order-2 lg:order-1">
+              <FadeIn>
+                <h2 className="font-serif text-3xl font-semibold text-foreground">
+                  <span className="text-balance">Dlaczego to robię?</span>
+                </h2>
+              </FadeIn>
 
-          <FadeIn delay={100}>
-            <div className="mt-8 space-y-4 text-muted-foreground">
-              <p className="leading-relaxed">
-                Pamiętam, jak sama czułam się niepewnie wchodząc pierwszy raz na
-                siłownię. Wszystko wydawało się skomplikowane, a spojrzenia
-                innych – oceniające. Dziś wiem, że większość tych obaw była w
-                mojej głowie.
-              </p>
-              <p className="leading-relaxed">
-                Chcę, żebyś mogła pominąć ten etap niepewności. Żebyś od
-                pierwszego dnia czuła się pewnie i wiedziała, co robisz. Dlatego
-                uczę nie tylko techniki ćwiczeń, ale przede wszystkim budowania
-                pewności siebie.
-              </p>
-              <p className="leading-relaxed">
-                Siłownia to nie miejsce rywalizacji. To przestrzeń, w której
-                inwestujesz w siebie – w swoje zdrowie, siłę i samopoczucie. I
-                chcę Ci w tym towarzyszyć.
-              </p>
+              <FadeIn delay={100}>
+                <div className="mt-8 space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed">
+                    Pamiętam, jak sama czułam się niepewnie wchodząc pierwszy raz na
+                    siłownię. Wszystko wydawało się skomplikowane, a spojrzenia
+                    innych – oceniające. Dziś wiem, że większość tych obaw była w
+                    mojej głowie.
+                  </p>
+                  <p className="leading-relaxed">
+                    Chcę, żebyś mogła pominąć ten etap niepewności. Żebyś od
+                    pierwszego dnia czuła się pewnie i wiedziała, co robisz. Dlatego
+                    uczę nie tylko techniki ćwiczeń, ale przede wszystkim budowania
+                    pewności siebie.
+                  </p>
+                  <p className="leading-relaxed">
+                    Siłownia to nie miejsce rywalizacji. To przestrzeń, w której
+                    inwestujesz w siebie – w swoje zdrowie, siłę i samopoczucie. I
+                    chcę Ci w tym towarzyszyć.
+                  </p>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+            <FadeIn className="order-1 lg:order-2">
+              <div className="relative mx-auto aspect-[3/4] max-w-md overflow-hidden rounded-2xl lg:mx-0">
+                <Image
+                  src="/images/ania-squat.png"
+                  alt="Ania wykonująca przysiad ze sztangą"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
