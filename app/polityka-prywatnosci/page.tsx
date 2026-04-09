@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/fade-in"
 export const metadata: Metadata = {
   title: "Polityka prywatności",
   description:
-    "Polityka prywatności strony Aktywnie na codzień. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.",
+    "Polityka prywatności strony Aktywnie na co dzień. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.",
 }
 
 export default function PolitykaPrywatnosciPage() {
