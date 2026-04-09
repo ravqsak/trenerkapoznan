@@ -17,7 +17,7 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Aktywnie na co dzień | Trener personalny kobiet Poznań',
+    default: 'Aktywnie na co dzień | Trenerka personalna w Poznaniu',
     template: '%s | Aktywnie na co dzień',
   },
   description: 'Trening personalny dla kobiet w Poznaniu. Naucz się ćwiczyć na siłowni bez stresu i zbuduj pewność siebie.',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     url: 'https://trenerkapoznan.pl',
-    title: 'Aktywnie na co dzień | Trener personalny kobiet Poznań',
+    title: 'Aktywnie na co dzień | Trenerka personalna w Poznaniu',
     description: 'Trening personalny dla kobiet w Poznaniu. Naucz się ćwiczyć na siłowni bez stresu i zbuduj pewność siebie.',
     siteName: 'Aktywnie na co dzień',
   },
