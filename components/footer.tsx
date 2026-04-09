@@ -12,7 +12,7 @@ export function Footer() {
               href="/"
               className="font-serif text-xl font-semibold text-primary"
             >
-              Aktywnie na codzień
+              Aktywnie na co dzień
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
               Trening personalny dla kobiet w Poznaniu. Spokojnie, bez presji i
@@ -43,7 +43,7 @@ export function Footer() {
 
           {/* Social & Legal */}
           <div>
-            <h3 className="font-semibold text-foreground">Śledź mnie</h3>
+            <h3 className="font-semibold text-foreground">Obserwuj mnie</h3>
             <div className="mt-3 flex gap-4">
               <a
                 href="https://www.instagram.com/m/aktywnienacodzien_"
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Aktywnie na codzień. Wszelkie prawa
+            © {new Date().getFullYear()} Aktywnie na co dzień. Wszelkie prawa
             zastrzeżone.
           </p>
         </div>

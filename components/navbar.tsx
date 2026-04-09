@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Instagram, Facebook } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -44,7 +44,7 @@ export function Navbar() {
             href="/"
             className="font-serif text-xl font-semibold text-primary transition-colors hover:text-accent md:text-2xl"
           >
-            Aktywnie na codzień
+            Aktywnie na co dzień
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,6 +63,26 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center gap-3 border-l border-border pl-6">
+              <a
+                href="https://www.instagram.com/m/aktywnienacodzien_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-primary"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.facebook.com/a.ania.kosinska.a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-primary"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

@@ -13,7 +13,7 @@ export function ContactSection() {
             </span>
             <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
               <span className="text-balance">
-                Zacznij spokojnie – pierwszy krok należy do Ciebie
+                Porozmawiajmy o Twoich celach
               </span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">

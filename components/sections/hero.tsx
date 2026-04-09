@@ -16,7 +16,7 @@ export function HeroSection() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center px-4 sm:px-6 lg:px-8">
@@ -31,8 +31,8 @@ export function HeroSection() {
 
           <FadeIn delay={150}>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Spokojnie, bez presji i stresu. Nauczę Cię, jak czuć się pewnie na
-              siłowni.
+              Nauczę Cię, jak czuć się pewnie na siłowni. Spokojnie, bez presji
+              i stresu.
             </p>
           </FadeIn>
 
