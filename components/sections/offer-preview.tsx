@@ -10,14 +10,14 @@ const offerings = [
     title: "Dla początkujących",
     description:
       "Pierwsze kroki na siłowni bez stresu. Poznanie sprzętu, nauka techniki i budowanie pewności siebie.",
-    price: "chwilowo niedostępne",
+    price: "",
   },
   {
     icon: Dumbbell,
     title: "Trening personalny",
     description:
       "Indywidualne treningi dopasowane do Twoich celów. Pracujemy nad siłą, mobilnością i sylwetką.",
-    price: "od 169,99 zł",
+    price: "od 131,45 zł",
   },
   {
     icon: Heart,
@@ -50,7 +50,7 @@ export function OfferPreviewSection() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {offerings.map((item, index) => (
             <FadeIn key={item.title} delay={index * 100}>
-              <Card className={item.title === "Dla początkujących" ? "h-full border-border/50 bg-muted/40 opacity-60 grayscale" : "h-full border-border/50 bg-card transition-shadow hover:shadow-lg"}>
+              <Card className="h-full border-border/50 bg-card transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                     <item.icon
@@ -64,7 +64,9 @@ export function OfferPreviewSection() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{item.description}</p>
-                  <p className="mt-4 font-semibold text-primary">{item.price}</p>
+                  {item.price && (
+                    <p className="mt-4 font-semibold text-primary">{item.price}</p>
+                  )}
                 </CardContent>
               </Card>
             </FadeIn>

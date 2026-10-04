@@ -136,8 +136,18 @@ export default function OfertaPage() {
                           index === 2 ? "bg-primary/10" : "bg-muted/50"
                         }`}
                       >
-                        <span className="font-medium text-foreground">
-                          {item.sessions}
+                        <span className="flex flex-col gap-1 font-medium text-foreground">
+                          <span>{item.sessions}</span>
+                          {item.sessions === "5 treningów" && (
+                            <span className="w-fit rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary-foreground">
+                              Najczęściej wybierane
+                            </span>
+                          )}
+                          {item.sessions === "20 treningów" && (
+                            <span className="w-fit rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent-foreground">
+                              Najkorzystniejsze
+                            </span>
+                          )}
                         </span>
                         <span className="text-right">
                           <span className="block text-lg font-bold text-primary">
@@ -166,21 +176,21 @@ export default function OfertaPage() {
       </section>
 
       {/* Dla początkujących */}
-      <section className="bg-muted/30 py-16 opacity-60 grayscale md:py-24" aria-disabled="true">
+      <section className="bg-muted/30 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-muted">
                 <Sparkles className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
               </div>
-              <h2 className="mt-4 font-serif text-3xl font-semibold text-muted-foreground">
+              <h2 className="mt-4 font-serif text-3xl font-semibold text-foreground">
                 Dla początkujących
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Ta oferta jest chwilowo niedostępna.
+                Pierwsze kroki na siłowni bez stresu. Poznanie sprzętu, nauka techniki i budowanie pewności siebie.
               </p>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                Chwilowo niedostępne
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-primary">
+                Umów się i zacznij bez stresu
               </p>
             </div>
           </FadeIn>
