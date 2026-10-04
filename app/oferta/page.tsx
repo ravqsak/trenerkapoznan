@@ -8,7 +8,7 @@ import { Check, Sparkles, Dumbbell, Heart, Zap, ArrowRight } from "lucide-react"
 export const metadata: Metadata = {
   title: "Oferta",
   description:
-    "Trening personalny dla kobiet w Poznaniu. Pakiety dla początkujących i zaawansowanych. Sprawdź cennik i wybierz odpowiedni dla siebie pakiet.",
+    "Trening personalny dla kobiet w Poznaniu. Sprawdź cennik Fabryki Formy - Wilczak i wybierz odpowiedni dla siebie pakiet.",
 }
 
 const beginnerPackages = [
@@ -37,9 +37,10 @@ const beginnerPackages = [
 ]
 
 const personalTraining = [
-  { sessions: "1 trening", price: "150" },
-  { sessions: "3 treningi", price: "350" },
-  { sessions: "6 treningów", price: "600" },
+  { sessions: "1 trening", price: "169,99" },
+  { sessions: "5 treningów", price: "729", detail: "145,80 zł za jeden" },
+  { sessions: "10 treningów", price: "1379", detail: "137,90 zł za jeden" },
+  { sessions: "20 treningów", price: "2629", detail: "131,45 zł za jeden" },
 ]
 
 const benefits = [
@@ -66,78 +67,6 @@ export default function OfertaPage() {
               </p>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* Dla początkujących */}
-      <section className="bg-background py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <div className="text-center">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                <Sparkles className="h-6 w-6 text-primary" aria-hidden="true" />
-              </div>
-              <h2 className="mt-4 font-serif text-3xl font-semibold text-foreground">
-                Dla początkujących
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                Trening personalny dla kobiet w Poznaniu, które chcą zacząć
-                ćwiczyć na siłowni i potrzebują wsparcia w nauce techniki oraz
-                obsługi sprzętu.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {beginnerPackages.map((pkg, index) => (
-              <FadeIn key={pkg.name} delay={index * 100}>
-                <Card
-                  className={`relative h-full transition-shadow hover:shadow-lg ${
-                    pkg.popular ? "border-primary shadow-md" : "border-border/50"
-                  }`}
-                >
-                  {pkg.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="rounded-full bg-primary px-4 py-1 text-xs font-medium text-primary-foreground">
-                        Najpopularniejszy
-                      </span>
-                    </div>
-                  )}
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-xl text-foreground">
-                      {pkg.name}
-                    </CardTitle>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold text-foreground">
-                        {pkg.price}
-                      </span>
-                      <span className="text-muted-foreground"> zł</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {pkg.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-3">
-                          <Check
-                            className="mt-0.5 h-5 w-5 shrink-0 text-primary"
-                            aria-hidden="true"
-                          />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      asChild
-                      className="mt-8 w-full"
-                      variant={pkg.popular ? "default" : "outline"}
-                    >
-                      <Link href="/#kontakt">Umów się</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -195,7 +124,7 @@ export default function OfertaPage() {
               <Card className="h-fit border-border/50">
                 <CardHeader>
                   <CardTitle className="text-xl text-foreground">
-                    Cennik
+                    Cennik Fabryki Formy - Wilczak
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -210,8 +139,15 @@ export default function OfertaPage() {
                         <span className="font-medium text-foreground">
                           {item.sessions}
                         </span>
-                        <span className="text-lg font-bold text-primary">
-                          {item.price} zł
+                        <span className="text-right">
+                          <span className="block text-lg font-bold text-primary">
+                            {item.price} zł
+                          </span>
+                          {item.detail && (
+                            <span className="block text-xs text-muted-foreground">
+                              {item.detail}
+                            </span>
+                          )}
                         </span>
                       </div>
                     ))}
@@ -226,6 +162,28 @@ export default function OfertaPage() {
               </Card>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Dla początkujących */}
+      <section className="bg-muted/30 py-16 opacity-60 grayscale md:py-24" aria-disabled="true">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-muted">
+                <Sparkles className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
+              </div>
+              <h2 className="mt-4 font-serif text-3xl font-semibold text-muted-foreground">
+                Dla początkujących
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                Ta oferta jest chwilowo niedostępna.
+              </p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                Chwilowo niedostępne
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
