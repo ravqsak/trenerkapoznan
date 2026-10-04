@@ -132,9 +132,7 @@ export default function OfertaPage() {
                     {personalTraining.map((item, index) => (
                       <div
                         key={item.sessions}
-                        className={`flex items-center justify-between rounded-lg p-4 ${
-                          index === 2 ? "bg-primary/10" : "bg-muted/50"
-                        }`}
+                        className="flex items-center justify-between rounded-lg bg-muted/50 p-4"
                       >
                         <span className="flex flex-col gap-1 font-medium text-foreground">
                           <span>{item.sessions}</span>
@@ -145,7 +143,7 @@ export default function OfertaPage() {
                           )}
                           {item.sessions === "20 treningów" && (
                             <span className="w-fit rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent-foreground">
-                              Najkorzystniejsze
+                              Najkorzystniej
                             </span>
                           )}
                         </span>
