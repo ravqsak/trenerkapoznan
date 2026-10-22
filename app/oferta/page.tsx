@@ -83,7 +83,7 @@ export default function OfertaPage() {
                   />
                 </div>
                 <h2 className="mt-4 font-serif text-3xl font-semibold text-foreground">
-                  Trening personalny
+                  Trening personalny w Fabryce Formy Wilczak
                 </h2>
                 <p className="mt-4 text-muted-foreground">
                   Indywidualny trening personalny w Poznaniu dopasowany do
@@ -124,7 +124,7 @@ export default function OfertaPage() {
               <Card className="h-fit border-border/50">
                 <CardHeader>
                   <CardTitle className="text-xl text-foreground">
-                    Cennik Fabryki Formy - Wilczak
+                    Cennik
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -168,6 +168,61 @@ export default function OfertaPage() {
                   </Button>
                 </CardContent>
               </Card>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Prowadzenie online */}
+      <section className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <FadeIn>
+              <div className="rounded-2xl border border-border/60 bg-card p-8 shadow-sm md:p-12">
+                <div className="max-w-3xl">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                    Współpraca online
+                  </p>
+                  <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
+                    Prowadzenie trenerskie online
+                  </h2>
+                  <p className="mt-5 text-lg leading-relaxed text-foreground">
+                    Pełne wsparcie i opieka trenerska. Trenuj gdzie chcesz i kiedy chcesz, z moim wsparciem na każdym kroku.
+                  </p>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">
+                    Nie mieszkasz w Poznaniu albo wolisz trenować w swoich godzinach? Prowadzenie online to nie gotowy, przypadkowy PDF. To stała, spersonalizowana współpraca 1:1, w której dbam o Twoją technikę, regularność i bezpieczeństwo dokładnie tak, jak na siłowni.
+                  </p>
+                </div>
+
+                <div className="mt-10">
+                  <h3 className="font-semibold text-foreground">Co może obejmować współpraca:</h3>
+                  <ul className="mt-5 grid gap-4 md:grid-cols-2">
+                    <li className="rounded-xl bg-muted/50 p-5">
+                      <p className="font-semibold text-foreground">Indywidualny plan treningowy</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Ułożony ściśle pod Twój cel, poziom doświadczenia, ograniczenia ruchowe oraz sprzęt, do którego masz dostęp.</p>
+                    </li>
+                    <li className="rounded-xl bg-muted/50 p-5">
+                      <p className="font-semibold text-foreground">Analiza techniki wideo</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Nagrywasz ćwiczenia, a ja regularnie sprawdzam Twoją technikę, koryguję błędy i dbam o bezpieczeństwo.</p>
+                    </li>
+                    <li className="rounded-xl bg-muted/50 p-5">
+                      <p className="font-semibold text-foreground">Cotygodniowe raporty i ewaluacja</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Co tydzień sprawdzamy progres, samopoczucie oraz regenerację i na bieżąco modyfikujemy plan.</p>
+                    </li>
+                    <li className="rounded-xl bg-muted/50 p-5">
+                      <p className="font-semibold text-foreground">Stały kontakt na czacie</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Masz pytanie przed treningiem lub gorszy dzień? Jesteśmy w kontakcie z dużą dawką wsparcia i motywacji.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <Button asChild size="lg" className="mt-8">
+                  <Link href="/#kontakt">
+                    Zapytaj o współpracę online
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </div>
             </FadeIn>
           </div>
         </div>
